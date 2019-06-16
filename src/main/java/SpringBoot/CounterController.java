@@ -10,17 +10,13 @@ public class CounterController {
     @Autowired
     public Counter counter;
 
-
-
     @GetMapping("/api/v1/counter")
     int intCount() {
-        int count = 0;
-        return count;
-
+        return counter.getValue();
     }
+
     @PostMapping("/api/v1/counter")
     void getCount() {
-        int count = intCount();
-        count++;
+        counter.intCount();
     }
 }
