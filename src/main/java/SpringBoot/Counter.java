@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 public class Counter {
     private int count = 0;
 
-    public void intCount() {
+    public void incCount() {
         count++;
     }
 

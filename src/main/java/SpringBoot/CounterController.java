@@ -11,12 +11,12 @@ public class CounterController {
     public Counter counter;
 
     @GetMapping("/api/v1/counter")
-    int intCount() {
+    int getCount() {
         return counter.getValue();
     }
 
     @PostMapping("/api/v1/counter")
-    void getCount() {
-        counter.intCount();
+    void incCount() {
+        counter.incCount();
     }
 }
