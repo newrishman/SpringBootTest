@@ -5,16 +5,17 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
 public class GreetingController {
 
-    @GetMapping("/greeting")
-    public String greeting(@RequestParam(name = "name", required = false, defaultValue = "World") String name,
+    @GetMapping("/0")
+    public int greeting(@RequestParam(name = "0", required = false) String name,
                            Model model
     ) {
         model.addAttribute("name", name);
-        return "greeting";
+        return 0;
     }
 
 }
